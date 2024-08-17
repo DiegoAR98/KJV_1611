@@ -15,6 +15,8 @@ inputs = tokenizer(text, return_tensors='pt', max_length=512, truncation=True)
 # Fine-tune the model
 training_args = TrainingArguments(
     output_dir='../models/',
+    logging_dir='../logs/',
+    logging_steps=100,
     overwrite_output_dir=True,
     num_train_epochs=1,
     per_device_train_batch_size=1,
@@ -28,5 +30,7 @@ trainer = Trainer(
     train_dataset=inputs['input_ids'],
     data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False),
 )
+
+
 
 trainer.train()

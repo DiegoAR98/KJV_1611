@@ -1,0 +1,14 @@
+# Preprocess the data
+python scripts/data_preprocessing.py
+
+# Train the model
+python scripts/build_language_model.py
+
+# Monitor training (in a new terminal)
+tensorboard --logdir=logs/
+
+# Generate text
+python scripts/inference.py
+
+# Evaluate the model
+python scripts/evaluate_model.py
