@@ -1,0 +1,20 @@
+# Ignore virtual environment folder
+venv/
+
+# Ignore model output files
+models/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore VS Code settings folder
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore any additional files you don't want to commit
