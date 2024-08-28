@@ -12,3 +12,6 @@ python scripts/inference.py
 
 # Evaluate the model
 python scripts/evaluate_model.py
+
+Testing 
+
