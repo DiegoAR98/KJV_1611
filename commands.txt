@@ -1,8 +1,14 @@
+# Install dependencies
+pip install -r requirements.txt
+
+# If installation fails due to network restrictions,
+# download the required packages offline and install them locally.
+
 # Preprocess the data
 python scripts/data_preprocessing.py
 
 # Train the model
-python scripts/build_language_model.py
+python scripts/build_language_model.py  # minimal training step
 
 # Monitor training (in a new terminal)
 tensorboard --logdir=logs/
@@ -12,6 +18,3 @@ python scripts/inference.py
 
 # Evaluate the model
 python scripts/evaluate_model.py
-
-Testing 
-

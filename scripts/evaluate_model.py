@@ -1,7 +1,12 @@
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+try:
+    from transformers import GPT2LMHeadModel, GPT2Tokenizer
+except ImportError as exc:
+    raise ImportError(
+        "The 'transformers' package is required. Install dependencies with \"pip install -r requirements.txt\"."
+    ) from exc
 
 # Load model and tokenizer
-model = GPT2LMHeadModel.from_pretrained('../models/kjv_language_model')
+model = GPT2LMHeadModel.from_pretrained('models/kjv_language_model')
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 def evaluate_model(text, model, tokenizer):

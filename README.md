@@ -1,2 +1,21 @@
 # KJV_1611
-creating a language model using the King James Bible 1611 as the sole source of knowledge
+Creating a language model using the King James Bible 1611 as the sole source of knowledge.
+
+## Usage
+
+Install the required dependencies and run the scripts from the repository root:
+
+```bash
+pip install -r requirements.txt
+python scripts/data_preprocessing.py
+python scripts/build_language_model.py
+python scripts/inference.py
+python scripts/evaluate_model.py
+```
+
+If you encounter an error such as `ModuleNotFoundError: No module named 'transformers'`,
+ensure that the dependencies were installed successfully. Network restrictions
+may prevent `pip` from downloading packages, so download them offline if
+necessary. The training script performs a very small update to avoid issues
+with PyTorch's distributed features. For full training you may need a complete
+PyTorch installation with `torch.distributed` support.
