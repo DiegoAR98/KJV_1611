@@ -1,4 +1,9 @@
-from transformers import GPT2LMHeadModel
+try:
+    from transformers import GPT2LMHeadModel
+except ImportError as exc:
+    raise ImportError(
+        "The 'transformers' package is required. Install dependencies with \"pip install -r requirements.txt\"."
+    ) from exc
 
 # Save the model
 def save_model(model, path='models/kjv_language_model'):

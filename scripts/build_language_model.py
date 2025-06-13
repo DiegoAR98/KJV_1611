@@ -1,4 +1,16 @@
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, Trainer, TrainingArguments
+try:
+    from transformers import (
+        GPT2LMHeadModel,
+        GPT2Tokenizer,
+        TextDataset,
+        DataCollatorForLanguageModeling,
+        Trainer,
+        TrainingArguments,
+    )
+except ImportError as exc:
+    raise ImportError(
+        "The 'transformers' package is required. Install dependencies with \"pip install -r requirements.txt\"."
+    ) from exc
 
 # Load pre-trained GPT-2 model and tokenizer
 model_name = 'gpt2'
