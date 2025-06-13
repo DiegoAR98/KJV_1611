@@ -9,6 +9,4 @@ Install the required dependencies and run the scripts from the repository root:
 pip install -r requirements.txt
 python scripts/data_preprocessing.py
 python scripts/build_language_model.py
-python scripts/inference.py
-python scripts/evaluate_model.py
-```
+
