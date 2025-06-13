@@ -6,7 +6,7 @@ model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
 # Load preprocessed text
-with open('../data/kjv_1611.txt', 'r', encoding='utf-8') as file:
+with open('data/kjv_1611.txt', 'r', encoding='utf-8') as file:
     text = file.read()
 
 # Tokenize the Bible text
@@ -14,8 +14,8 @@ inputs = tokenizer(text, return_tensors='pt', max_length=512, truncation=True)
 
 # Fine-tune the model
 training_args = TrainingArguments(
-    output_dir='../models/',
-    logging_dir='../logs/',
+    output_dir='models/',
+    logging_dir='logs/',
     logging_steps=100,
     overwrite_output_dir=True,
     num_train_epochs=1,

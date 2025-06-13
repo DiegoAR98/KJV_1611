@@ -1,7 +1,7 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 # Load model and tokenizer
-model = GPT2LMHeadModel.from_pretrained('../models/kjv_language_model')
+model = GPT2LMHeadModel.from_pretrained('models/kjv_language_model')
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 def evaluate_model(text, model, tokenizer):
