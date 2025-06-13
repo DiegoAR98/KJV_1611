@@ -10,3 +10,8 @@ pip install -r requirements.txt
 python scripts/data_preprocessing.py
 python scripts/build_language_model.py
 
+If you encounter an error such as `ModuleNotFoundError: No module named 'transformers'`,
+ensure that the dependencies were installed successfully. Network restrictions
+may prevent `pip` from downloading packages, so download them offline if
+necessary.
+
